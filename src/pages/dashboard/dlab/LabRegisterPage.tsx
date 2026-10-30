@@ -16,6 +16,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { useLabInvoices } from "@/hooks/useLabInvoices";
 import { useLabClientNames, canonicalClient, clientKey, applyToInvoice } from "./dlabLinks";
+import { GenerateRecurringButton } from "@/components/dlab/GenerateRecurringButton";
 
 const money = (n: number) => `₦${Number(n || 0).toLocaleString()}`;
 
@@ -96,7 +97,10 @@ function Register({ config }: { config: RegisterConfig }) {
           <h1 className="text-2xl font-bold">{config.title}</h1>
           <p className="text-sm text-muted-foreground max-w-2xl">{config.description}</p>
         </div>
-        <Button onClick={openNew}><Plus className="mr-2 h-4 w-4" />Add {config.itemName}</Button>
+        <div className="flex flex-wrap gap-2">
+          {config.kind === "recurring" && <GenerateRecurringButton orders={rows} />}
+          <Button onClick={openNew}><Plus className="mr-2 h-4 w-4" />Add {config.itemName}</Button>
+        </div>
       </div>
 
       <div className="flex flex-wrap items-center gap-2">
