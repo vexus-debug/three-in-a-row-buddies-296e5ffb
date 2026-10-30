@@ -294,7 +294,7 @@ const dentalLabNav: NavGroup[] = [
     { title: "Production Overview", path: "dashboard", icon: LayoutDashboard },
     { title: "Case Board", path: "dlab/cases", icon: ClipboardList },
     { title: "Calendar", path: "dlab/calendar", icon: CalendarDays },
-    { title: "Recurring Orders", path: "dlab/r/recurring", icon: CalendarClock },
+    { title: "My Bench", path: "dlab/bench", icon: Wrench },
   ] },
   { label: "Catalogue", items: [
     { title: "Work Types", path: "dlab/r/work-types", icon: Package },
@@ -302,6 +302,7 @@ const dentalLabNav: NavGroup[] = [
   ] },
   { label: "Clients & Money", items: [
     { title: "Clients", path: "dlab/clients", icon: Users },
+    { title: "Recurring Orders", path: "dlab/r/recurring", icon: CalendarClock },
     { title: "Invoices", path: "dlab/invoices", icon: Receipt },
     { title: "Billing", path: "dlab/billing", icon: Wallet },
   ] },

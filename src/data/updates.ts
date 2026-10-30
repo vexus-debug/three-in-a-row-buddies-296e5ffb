@@ -13,6 +13,17 @@ export interface UpdateEntry {
 
 export const updates: UpdateEntry[] = [
   {
+    version: "v2.26.0",
+    date: "October 30, 2026",
+    title: "My Bench for technicians, and recurring orders that create their own cases",
+    kind: "feature",
+    items: [
+      { kind: "feature", text: "New My Bench page under Production: technicians see only their own cases, rush first, and finish their step with one tap." },
+      { kind: "feature", text: "Recurring Orders now has a Generate due cases button that adds every due standing order to the Case Board and moves its next due date forward." },
+      { kind: "improvement", text: "Recurring Orders moved to Clients & Billing, where standing client agreements belong." },
+    ],
+  },
+  {
     version: "v2.25.0",
     date: "October 30, 2026",
     title: "Start remakes straight from the Case Board",
