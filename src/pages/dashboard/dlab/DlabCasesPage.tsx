@@ -20,6 +20,7 @@ import { CaseFiles } from "@/components/dlab/CaseFiles";
 import { TeethPicker } from "@/components/dlab/TeethPicker";
 import { HoldDialog } from "@/components/dlab/HoldDialog";
 import { RemakeDialog } from "@/components/dlab/RemakeDialog";
+import { PrintTravelerButton } from "@/components/dlab/PrintTravelerButton";
 import { blockedReason, nextStage, prevStage, splitLegacyTeeth } from "@/lib/labWorkflow";
 import { toast } from "@/hooks/use-toast";
 import { useLabClientNames, canonicalClient, useClientPriceLookup } from "./dlabLinks";
@@ -177,6 +178,7 @@ export default function DlabCasesPage() {
                     ? <Button size="sm" variant="outline" disabled={hold.isPending} onClick={() => hold.mutate({ id: open.id, reason: null })}><PlayCircle className="mr-1 h-3.5 w-3.5" />Release hold</Button>
                     : <Button size="sm" variant="outline" onClick={() => setHoldFor(open)}><PauseCircle className="mr-1 h-3.5 w-3.5" />Put on hold</Button>}
                   <Button size="sm" variant="outline" onClick={() => setRemakeFor(open)}><RotateCcw className="mr-1 h-3.5 w-3.5" />Initiate remake</Button>
+                  <PrintTravelerButton c={{ ...open, teeth: teethOf(open) }} technician={techName(open.technician_id)} />
                   <Button size="sm" variant="ghost" className="text-destructive" onClick={() => {
                     if (window.confirm(`Cancel case ${open.case_number}? It will be removed from the board and from billing.`)) { move.mutate({ id: open.id, status: "cancelled" }); setOpenId(null); }
                   }}><Ban className="mr-1 h-3.5 w-3.5" />Cancel case</Button>

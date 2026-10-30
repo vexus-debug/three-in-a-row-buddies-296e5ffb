@@ -13,6 +13,16 @@ export interface UpdateEntry {
 
 export const updates: UpdateEntry[] = [
   {
+    version: "v2.27.0",
+    date: "October 30, 2026",
+    title: "Printable job travelers for lab cases",
+    kind: "feature",
+    items: [
+      { kind: "feature", text: "Print a job traveler from any case or from My Bench: scannable barcode, clinic, patient, teeth, shade, instructions and sign-off boxes for CAD, ceramist and QC." },
+      { kind: "feature", text: "Choose A5, A4 or 80mm thermal slip size. Rush cases print with a bold RUSH banner." },
+    ],
+  },
+  {
     version: "v2.26.0",
     date: "October 30, 2026",
     title: "My Bench for technicians, and recurring orders that create their own cases",
