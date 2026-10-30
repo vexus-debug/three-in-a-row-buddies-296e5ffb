@@ -142,10 +142,10 @@ export const DENTAL_LAB_HUBS: HubDomain[] = [
     primaryPath: "dlab/cases",
     tabs: [
       { title: "Case Board", path: "dlab/cases" },
+      { title: "My Bench", path: "dlab/bench" },
       { title: "Calendar", path: "dlab/calendar" },
       { title: "Quality Control", path: "dlab/r/qc" },
       { title: "Remakes & Warranties", path: "dlab/r/warranties" },
-      { title: "Recurring Orders", path: "dlab/r/recurring" },
     ],
   },
   {
@@ -166,6 +166,7 @@ export const DENTAL_LAB_HUBS: HubDomain[] = [
     primaryPath: "dlab/clients",
     tabs: [
       { title: "Clients", path: "dlab/clients" },
+      { title: "Recurring Orders", path: "dlab/r/recurring" },
       { title: "Price Books", path: "dlab/r/client-prices" },
       { title: "Invoices", path: "dlab/invoices" },
       { title: "Statements", path: "dlab/statements" },

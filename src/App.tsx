@@ -91,6 +91,7 @@ import { MainClinicOnly } from "@/components/dashboard/MainClinicOnly";
 // Dental lab
 import LabRegisterPage from "./pages/dashboard/dlab/LabRegisterPage";
 import DlabQcPage from "./pages/dashboard/dlab/DlabQcPage";
+import DlabBenchPage from "./pages/dashboard/dlab/DlabBenchPage";
 import DlabWarrantiesPage from "./pages/dashboard/dlab/DlabWarrantiesPage";
 import DlabCasesPage from "./pages/dashboard/dlab/DlabCasesPage";
 import DlabCalendarPage from "./pages/dashboard/dlab/DlabCalendarPage";
@@ -356,6 +357,7 @@ const App = () => (
               <Route path="dlab" element={<Navigate to="../dashboard" replace />} />
               <Route path="dlab/cases" element={<DlabCasesPage />} />
               <Route path="dlab/calendar" element={<DlabCalendarPage />} />
+              <Route path="dlab/bench" element={<DlabBenchPage />} />
               <Route path="dlab/clients" element={<DlabClientsPage />} />
               <Route path="dlab/invoices" element={<DlabInvoicesPage />} />
               <Route path="dlab/statements" element={<DlabStatementsPage />} />
