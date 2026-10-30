@@ -13,6 +13,7 @@ import { stageLabel } from "@/config/dentalLab";
 import { blockedReason, nextStage, HOLD_REASONS } from "@/lib/labWorkflow";
 import { benchTasks } from "@/lib/labBench";
 import { toast } from "@/hooks/use-toast";
+import { PrintTravelerButton } from "@/components/dlab/PrintTravelerButton";
 
 export default function DlabBenchPage() {
   const { data: cases = [] } = useLabCases();
@@ -87,6 +88,7 @@ export default function DlabBenchPage() {
                       {HOLD_REASONS.map((r: any) => { const v = typeof r === "string" ? r : r.label; return <SelectItem key={v} value={v}>{v}</SelectItem>; })}
                     </SelectContent>
                   </Select>
+                  <PrintTravelerButton c={c} technician={staff.find((s: any) => s.id === c.technician_id)?.full_name} compact />
                 </div>
               </CardContent>
             </Card>
